@@ -4,7 +4,10 @@
 const jedi = [];
 
 // 1b
-jedi[jedi.length] = "Luke";
+// jedi[jedi.length] = "Luke";
+// This doesn't include "Luke" in an array.
+
+jedi[0] = "Luke";
 
 // 1c
 jedi.push("Obi-Wan Kenobi");
@@ -16,19 +19,29 @@ jedi.unshift("Yoda");
 console.log(jedi[1]);
 
 // 1f
-jedi.pop();
+// jedi.pop();
+
+const force = jedi.pop();
+console.log(jedi);
 
 // 1g
 jedi.shift();
-// or
-// jedi.splice(0,1);
 console.log(jedi);
 
+
+// jedi.splice(0,1);
+// console.log(jedi.slice(1));
+
 // 2a
-const sithLords = ["Darth Vader", "Darth Sidious", "Darth Maul"];
+const sithLords = [
+    "Darth Vader",
+    "Darth Sidious", 
+    "Darth Maul"];
 
 // 2b
-const imperialOfficers = ["Grand Moff Tarkin", "Orson Krennic"];
+const imperialOfficers = [
+    "Grand Moff Tarkin", 
+    "Orson Krennic"];
 
 // 2c
 const starWarsVillains = sithLords.concat(imperialOfficers);
@@ -53,14 +66,16 @@ console.log(droids.protocol);
 // 3d
 droids[`assassin`] = `IG-11`;
 // or
-// droids.`assassin` = `IG-11`;
+// droids.assassin = `IG-11`;
 
 // BONUS
 // 4
-console.log(sithLords[0][6]);
+// console.log(sithLords[0][6]);
+console.log(starWarsVillains[0][6]);
 
 // 5
 console.log(sithLords.slice(-2, -1));
+// console.log(starWarsVillains.slice(-4, -3));
 
 // 6a
 const starWarsMovies = [
@@ -82,6 +97,6 @@ const starWarsMovies = [
 ];
 
 // 6b
-starWarsMovies.splice(1, 0, ["Solo", "Rogue One"]);
+starWarsMovies.splice(1, 0, "Solo", "Rogue One");
 
 // console.log(starWarsMovies);
